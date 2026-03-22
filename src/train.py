@@ -21,4 +21,4 @@ def train(model, dataset, config):
 
     trainer.train()
 
-    model.save_pretrained(training_cfg["output_dir"])
+    trainer.model.save_pretrained(training_cfg["output_dir"])

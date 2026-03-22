@@ -19,13 +19,6 @@ def run_inference(config, prompt=None):
     model, tokenizer = load_model(config)
     model = load_inference_model(config)
 
-    if prompt:
-        output = generate(model, tokenizer, prompt)
-        print("\n=== OUTPUT ===")
-        print(output)
-        return
-
-    # interactive mode
     while True:
         prompt = input("\nEnter prompt (or 'exit'): ")
         if prompt.lower() == "exit":
